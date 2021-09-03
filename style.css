@@ -17,6 +17,55 @@ body
     width: 1000px;
     margin-left: auto;
     margin-right: auto;
+    height: 84px;
+}
+
+#logo
+{
+    float: left;
+}
+
+#search
+{
+    float: left;
+    margin-top: 22px;
+    margin-left: 25px;
+}
+
+#form-group
+{
+    display: inline-block;
+}
+
+.button
+{
+    position: relative;
+    float: right;
+    margin-left: -40px;
+    background: 0;
+    padding: 0 0 4px 0;
+    border: 0;
+    width: 40px;
+    height: 40px;
+    font-size: 26px;
+    color: #666;
+    cursor: pointer;
+    
+}
+
+#form-search
+{
+    background-color: #f1f1f1;
+    padding-left: 10px;
+    padding-right: 40px;
+    height: 40px;
+    width: 190px;
+    font-size: 16px;
+    color: #001e3c;
+    border: 2px solid #001e3c;
+    border-radius: 8px;
+    box-sizing: border-box;
+    outline: none;
 }
 
 #topnav
