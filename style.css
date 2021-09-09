@@ -63,13 +63,57 @@ body
     padding-left: 10px;
     padding-right: 40px;
     height: 40px;
-    width: 190px;
+    width: 210px;
     font-size: 16px;
     color: #001e3c;
     border: 2px solid #001e3c;
     border-radius: 8px;
     box-sizing: border-box;
     outline: none;
+}
+
+#access
+{
+    float: right;
+    color: #f1f1f1;
+    height: 84px;
+}
+
+#access-list
+{
+    margin: 0;
+}
+
+#access-list > li
+{
+    float: left;
+    list-style-type: none;
+    margin: 15px;
+    margin-top: 30px;
+}
+
+#access-list > li:last-child
+{
+    margin-top: 20px;
+}
+
+#cart-icon
+{
+    height: 40px;
+    width: 40px;
+}
+
+#cart
+{
+    font-size: 16px;
+    list-style-type: none;
+    display: inline-block;
+    padding: 0;
+}
+
+#cart > li:first-child
+{
+    color: #ff8000;
 }
 
 #topnav
