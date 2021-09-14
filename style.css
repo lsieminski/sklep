@@ -6,6 +6,8 @@ body
     font-size: 20px;
 }
 
+/* Header bar section */
+
 #topheader
 {
     width: 100%;
@@ -116,6 +118,8 @@ body
     color: #ff8000;
 }
 
+/* Navigation section */
+
 #topnav
 {
     width: 100%;
@@ -140,6 +144,87 @@ body
     margin: 15px;
 }
 
+/* Main section */
+
+.container
+{
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.club-banner
+{
+    width: 998px;
+    height: 300px;
+    margin: 30px;
+    border: 1px solid #999;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+a.club-link
+{
+    color:#001e3c;
+}
+
+.club-label
+{
+    float: left;
+    height: 300px;
+    width: 240px;
+}
+
+.club-photo
+{
+    float: left;
+    height: 300px;
+    width: 758px;
+    overflow: hidden;
+}
+
+.club-photo img
+{
+    width: 758px;
+    transition: all 0.5s ease-in-out;
+}
+
+.club-photo:hover img
+{
+    transform: scale(105%);
+}
+
+.club-logo
+{
+    height: 240px;
+    background-color: #001e3c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.club-logo > img
+{
+    height: 170px;
+}
+
+.club-name
+{
+    height: 60px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.club-name > p
+{
+    font-size: 24px;
+    margin: 0;
+}
+
 .content
 {
     width: 1000px;
@@ -147,6 +232,8 @@ body
     margin-right: auto;
     text-align: justify;
 }
+
+/* Footer section */
 
 #footer
 {
