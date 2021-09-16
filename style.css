@@ -11,7 +11,7 @@ body
 #topheader
 {
     width: 100%;
-    background-color: #0030cb;  
+    background-color: #001e3c;  
 }
 
 #topcontainer
@@ -25,6 +25,46 @@ body
 #logo
 {
     float: left;
+    width: 270px;
+    height: 80px;
+}
+
+#logo-img
+{
+    float: left;
+}
+
+#logo-img > img
+{
+    height: 65px;
+    margin-top: 10px;
+}
+
+#logo-text
+{
+    float: left;
+    width: 195px;
+    color: #fff;
+    font-size: 14px;
+    /*font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;*/
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-left: 10px;
+    margin-top: 18px;
+    
+}
+
+#logo-text > h2
+{
+    margin: 0;
+    font-weight: 400;
+    font-style: italic;
+    letter-spacing: 1.5px;
+}
+
+#logo-text > p
+{
+    padding-top: 3px;
+    margin: 0;
 }
 
 #search
@@ -123,9 +163,10 @@ body
 #topnav
 {
     width: 100%;
-    background-color: #001e3c;
+    background-color: #fff;
     text-align: center;
     height: 50px;
+    border-bottom: 1px solid #999;
 }
 
 .menu
@@ -135,7 +176,6 @@ body
     margin-right: auto;
     margin-top: 0;
     padding-left: 0;
-    color: #fff;
 }
 
 .menu > li
@@ -158,7 +198,8 @@ body
 {
     width: 998px;
     height: 300px;
-    margin: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
     border: 1px solid #999;
     border-radius: 10px;
     overflow: hidden;
