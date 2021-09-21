@@ -6,6 +6,12 @@ body
     font-size: 20px;
 }
 
+a
+{
+    text-decoration: none;
+    color:#001e3c;
+}
+
 /* Header bar section */
 
 #topheader
@@ -46,7 +52,6 @@ body
     width: 195px;
     color: #fff;
     font-size: 14px;
-    /*font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;*/
     font-family: Georgia, 'Times New Roman', Times, serif;
     margin-left: 10px;
     margin-top: 18px;
@@ -165,7 +170,6 @@ body
     width: 100%;
     background-color: #fff;
     text-align: center;
-    height: 50px;
     border-bottom: 1px solid #999;
 }
 
@@ -174,14 +178,89 @@ body
     width: 1000px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 0;
+    margin: 0;
     padding-left: 0;
+    display: inline-block;
+}
+
+.menu-club-link
+{
+    display: block;
+    width: 170px;
+    padding: 15px;
 }
 
 .menu > li
 {
-    display: inline-block;
-    margin: 15px;
+    float: left;
+    list-style-type: none;
+}
+
+.menu > li:hover > .menu-club-link
+{
+    border-bottom: 2px solid #001e3c;
+    padding-bottom: 13px;
+}
+
+.menu > li > ul
+{
+    display: none;
+}
+
+.menu > li:hover > ul
+{
+    display: block;
+}
+
+.menu > li > ul
+{
+    list-style-type: none;
+}
+
+.nav-img
+{
+    height: 20px;
+    margin-bottom: -2px;
+}
+
+.nav-container
+{
+    background-color: #fff;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    /*border-top: 1px solid #001e3c;*/
+    border-bottom: 1px solid #bbb;
+}
+
+.nav-container-center
+{
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.nav-choice
+{
+    float: left;
+    text-align: left;
+    margin: 30px;
+    margin-top: 0;
+    color: #001e3c;
+}
+
+.nav-choice > ul
+{
+    list-style-type: none;
+    padding: 0;
+}
+
+.nav-choice > ul > li > a
+{
+    font-size: 18px;
+    line-height: 200%;
 }
 
 /* Main section */
@@ -233,6 +312,8 @@ a.club-link
 
 .club-photo:hover img
 {
+    -webkit-transform: scale(105%);
+    -ms-transform: scale(105%);
     transform: scale(105%);
 }
 
