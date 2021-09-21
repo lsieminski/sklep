@@ -165,7 +165,7 @@ a
 
 /* Navigation section */
 
-#topnav
+.topnav
 {
     width: 100%;
     background-color: #fff;
@@ -179,6 +179,7 @@ a
     margin-left: auto;
     margin-right: auto;
     margin: 0;
+    margin-bottom: -4px;
     padding-left: 0;
     display: inline-block;
 }
@@ -204,12 +205,17 @@ a
 
 .menu > li > ul
 {
-    display: none;
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
+    transition: visibility 0s, opacity 0.25s linear;
 }
 
 .menu > li:hover > ul
 {
     display: block;
+    visibility: visible;
+    opacity: 1;
 }
 
 .menu > li > ul
@@ -231,7 +237,7 @@ a
     left: 0;
     right: 0;
     z-index: 999;
-    /*border-top: 1px solid #001e3c;*/
+    border-top: 1px solid #fff;
     border-bottom: 1px solid #bbb;
 }
 
