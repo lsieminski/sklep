@@ -361,6 +361,34 @@ a.club-link
     text-align: justify;
 }
 
+/* Choice menu section */
+
+.choice-menu
+{
+    background-color: #fff;
+    width: 250px;
+    height: 800px;
+    border: 1px solid #001e3c;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.block-content
+{
+    text-align: left;
+}
+
+.category-choice
+{
+    display: none;
+}
+
+.expand-button
+{
+    float: right;
+    margin-right: 10px;
+}
+
 /* Footer section */
 
 #footer

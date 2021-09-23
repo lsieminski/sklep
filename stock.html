@@ -8,7 +8,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet"> 
 
     <script src="stock.js"></script>
 
@@ -241,81 +241,45 @@
     
     <main>
         <div class="container">
-            <div class="club-banner">
-                <a class="club-link" href="">   
-                    <div class="club-label">
-                        <div class="club-logo">
-                            <img src="img/Banners/cracovia-logo.png">
-                        </div>
-                        <div class="club-name">
-                            <p>Cracovia</p>
-                        </div>
-                    </div>
-                    <div class="club-photo">
-                        <img src="img/Banners/cracovia-photo.jpg">
-                    </div>
-                </a>    
-            </div>
-            <div class="container">
-                <div class="club-banner">
-                    <a class="club-link" href="">
-                        <div class="club-label">
-                            <div class="club-logo">
-                                <img src="img/Banners/lech-logo.png">
-                            </div>
-                            <div class="club-name">
-                                <p>Lech Poznań</p>
-                            </div>
-                        </div>
-                        <div class="club-photo">
-                            <img src="img/Banners/lech-photo.jpg">
-                        </div>
-                    </a>    
+            <div class="choice-menu">
+                <div class="block-title">
+                    Wybierz kategorie
                 </div>
-            <div class="club-banner">
-                <a class="club-link" href="">
-                    <div class="club-label">
-                        <div class="club-logo">
-                            <img src="img/Banners/legia-logo.png">
-                        </div>
-                        <div class="club-name">
-                            <p>Legia Warszawa</p>
-                        </div>
-                    </div>
-                    <div class="club-photo">
-                        <img src="img/Banners/legia-photo.jpeg">
-                    </div>
-                </a>    
+                <div class="block-content">
+                    <ul class="category">
+                        <li>Klub<div class="expand-button" onclick="expander(0)">+</div>
+                            <ul class="category-choice">
+                                <li>Cracovia</li>
+                                <li>Lech Poznań</li>
+                                <li>Legia Warszawa</li>
+                                <li>Wisła Kraków</li>
+                                <li>Śląsk Wrocław</li>
+                            </ul>
+                        </li>    
+                        <li>Stroje meczowe<div class="expand-button" onclick="expander(1)">+</div>
+                            <ul class="category-choice">
+                                <li>Koszulki</li>
+                                <li>Spodenki i getry</li>
+                            </ul>
+                        </li>    
+                        <li>Odzież<div class="expand-button" onclick="expander(2)">+</div>
+                            <ul class="category-choice">
+                                <li>T-shirty</li>
+                                <li>Bluzy</li>
+                            </ul>
+                        </li>    
+                        <li>Akcesoria<div class="expand-button" onclick="expander(3)">+</div>
+                            <ul class="category-choice">
+                                <li>Szaliki</li>
+                                <li>Flagi</li>
+                                <li>Gadżety</li>
+                            </ul>
+                        </li>    
+                    </ul>
+                </div>
             </div>
-            <div class="club-banner">
-                <a class="club-link" href="">   
-                    <div class="club-label">
-                        <div class="club-logo">
-                            <img src="img/Banners/wisla-logo.png">
-                        </div>
-                        <div class="club-name">
-                            <p>Wisła Kraków</p>
-                        </div>
-                    </div>
-                    <div class="club-photo">
-                        <img src="img/Banners/wisla-photo.jpg">
-                    </div>
-                </a>    
-            </div>
-            <div class="club-banner">
-                <a class="club-link" href="">   
-                    <div class="club-label">
-                        <div class="club-logo">
-                            <img src="img/Banners/slask-logo.png">
-                        </div>
-                        <div class="club-name">
-                            <p>Śląsk Wrocław</p>
-                        </div>
-                    </div>
-                    <div class="club-photo">
-                        <img src="img/Banners/slask-photo.jpg">
-                    </div>
-                </a>    
+            <div class="products-container">
+
             </div>
         </div>
     </main>
