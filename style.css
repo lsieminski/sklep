@@ -366,11 +366,19 @@ a.club-link
 .choice-menu
 {
     background-color: #fff;
-    width: 250px;
+    width: 220px;
     height: 800px;
-    border: 1px solid #001e3c;
+    border: 1px solid #999;
     border-radius: 5px;
     margin: 10px;
+}
+
+.block-title
+{
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-top: 20px;
+    font-weight: 700;
 }
 
 .block-content
@@ -378,15 +386,50 @@ a.club-link
     text-align: left;
 }
 
+.category
+{
+    list-style-type: none;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.category > li
+{
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #ccc;
+    font-weight: 700;
+    font-size: 18px;
+}
+
 .category-choice
 {
     display: none;
+    list-style-type: none;
+    font-size: 18px;
+    line-height: 150%;
+    padding: 0;
+    font-weight: 400;
+}
+
+.category-choice > li
+{
+    border-top: 1px solid #ccc;
+    padding-left: 20px;
+    padding-bottom: 2px;
+}
+
+.category-choice > li:first-child
+{
+    margin-top: 5px;
 }
 
 .expand-button
 {
     float: right;
-    margin-right: 10px;
+    cursor: pointer;
+    padding: 5px;
+    padding-top: 0;
 }
 
 /* Footer section */
