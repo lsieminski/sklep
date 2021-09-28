@@ -242,33 +242,37 @@
     <main>
         <div class="container">
             <nav class="choice-menu">
+            <div class="block-content">
                 <div class="block-title">
-                    Wybierz kategorie
+                        Wybierz klub
                 </div>
-                <div class="block-content">
-                    <ul class="category">
-                        <li>Klub<div class="expand-button" onclick="expander(0)">+</div>
-                            <ul class="category-choice">
-                                <li>Cracovia</li>
-                                <li>Lech Poznań</li>
-                                <li>Legia Warszawa</li>
-                                <li>Wisła Kraków</li>
-                                <li>Śląsk Wrocław</li>
+                            <ul class="club-choice">
+                                <li id="club-0" onclick="club_choice(0)">Cracovia</li>
+                                <li id="club-1" onclick="club_choice(1)">Lech Poznań</li>
+                                <li id="club-2" onclick="club_choice(2)">Legia Warszawa</li>
+                                <li id="club-3" onclick="club_choice(3)">Wisła Kraków</li>
+                                <li id="club-4" onclick="club_choice(4)">Śląsk Wrocław</li>
                             </ul>
-                        </li>    
-                        <li>Stroje meczowe<div class="expand-button" onclick="expander(1)">+</div>
+                    <div class="block-title">
+                        Wybierz kategorie
+                </div>
+                    <ul class="category">
+                        <div class="expand-button" onclick="expander(0)">+</div>
+                        <li>Stroje meczowe
                             <ul class="category-choice">
                                 <li>Koszulki</li>
                                 <li>Spodenki i getry</li>
                             </ul>
-                        </li>    
-                        <li>Odzież<div class="expand-button" onclick="expander(2)">+</div>
+                        </li>
+                        <div class="expand-button" onclick="expander(1)">+</div>
+                        <li>Odzież
                             <ul class="category-choice">
                                 <li>T-shirty</li>
                                 <li>Bluzy</li>
                             </ul>
-                        </li>    
-                        <li>Akcesoria<div class="expand-button" onclick="expander(3)">+</div>
+                        </li>
+                        <div class="expand-button" onclick="expander(2)">+</div>
+                        <li>Akcesoria
                             <ul class="category-choice">
                                 <li>Szaliki</li>
                                 <li>Flagi</li>
@@ -302,7 +306,7 @@
                         Legia Warszawa
                     </div>
                     <div class="product-description">
-                        Koszulka Wyjazdowa 2021/22
+                        Koszulka wyjazdowa 2021/22
                     </div>
                     <div class="product-price">
                         <span class="product-price-value">279.00</span>

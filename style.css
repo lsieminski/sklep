@@ -376,10 +376,12 @@ a.club-link
 
 .block-title
 {
-    font-size: 18px;
+    font-size: 16px;
     text-transform: uppercase;
     margin-top: 20px;
+    margin-left: 20px;
     font-weight: 700;
+    color: #999;
 }
 
 .block-content
@@ -392,6 +394,7 @@ a.club-link
     list-style-type: none;
     padding-left: 20px;
     padding-right: 20px;
+    font-size: 16px;
 }
 
 .category > li
@@ -400,14 +403,31 @@ a.club-link
     padding-bottom: 5px;
     border-bottom: 1px solid #ccc;
     font-weight: 700;
-    font-size: 18px;
+    font-size: 16px;
+}
+
+.club-choice
+{
+    list-style-type: none;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 16px;
+    line-height: 150%;
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+.club-choice > li
+{
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 2px;
 }
 
 .category-choice
 {
     display: none;
     list-style-type: none;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 150%;
     padding: 0;
     font-weight: 400;
@@ -427,10 +447,15 @@ a.club-link
 
 .expand-button
 {
-    float: right;
+    float: left;
     cursor: pointer;
-    padding: 5px;
-    padding-top: 0;
+    margin-right: 4px;
+    width: 15px;
+    border: 1px solid #999;
+    border-radius: 5px;
+    font-size: 12px;
+    background-color: #f3f3f3;
+    text-align: center;
 }
 
 .products-container
