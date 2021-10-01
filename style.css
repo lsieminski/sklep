@@ -423,6 +423,12 @@ a.club-link
     padding-bottom: 2px;
 }
 
+.club-choice > li:hover
+{
+    color: #ff3333;
+    cursor: pointer;
+}
+
 .category-choice
 {
     display: none;
@@ -438,6 +444,12 @@ a.club-link
     border-top: 1px solid #ccc;
     padding-left: 20px;
     padding-bottom: 2px;
+}
+
+.category-choice > li:hover
+{
+    color: #ff3333;
+    cursor: pointer;
 }
 
 .category-choice > li:first-child

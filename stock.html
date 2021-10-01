@@ -258,17 +258,17 @@
                 </div>
                     <ul class="category">
                         <div class="expand-button" onclick="expander(0)">+</div>
-                        <li>Stroje meczowe
+                        <li id="category-0">Stroje meczowe
                             <ul class="category-choice">
-                                <li>Koszulki</li>
-                                <li>Spodenki i getry</li>
+                                <li id="category-1" class="koszulki" onclick="category_choice(1)">Koszulki</li>
+                                <li id="category-2" class="spodenki" onclick="category_choice(2)">Spodenki i getry</li>
                             </ul>
                         </li>
                         <div class="expand-button" onclick="expander(1)">+</div>
-                        <li>Odzież
+                        <li id="category-3">Odzież
                             <ul class="category-choice">
-                                <li>T-shirty</li>
-                                <li>Bluzy</li>
+                                <li id="category-4" class="t-shirty" onclick="category_choice(4)">T-shirty</li>
+                                <li id="category-5" class="bluzy" onclick="category_choice(5)">Bluzy</li>
                             </ul>
                         </li>
                         <div class="expand-button" onclick="expander(2)">+</div>
@@ -283,7 +283,7 @@
                 </div>
             </nav>
             <div class="products-container">
-                <div class="product">
+                <div class="product koszulki">
                     <div class="product-photo">
                         <img src="img/Products/legia-koszulka-domowa.jpg">
                     </div>
@@ -298,7 +298,7 @@
                         <span class="product-price-currency">zł</span>
                     </div>
                 </div>
-                <div class="product">
+                <div class="product t-shirty">
                     <div class="product-photo">
                         <img src="img/Products/legia-koszulka-wyjazdowa.jpg">
                     </div>
