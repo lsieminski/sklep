@@ -27,46 +27,40 @@ function club_choice(nr)
 
   club_filter_indicator = true;
 
-  if (category_filter_indicator == true)
-  {
-    for (i=0; i<product_club_name.length; i++)
+  for (i=0; i<product_club_name.length; i++)
     {
-      if (category_filter[i] == true)
-      {
         if (product_club_name[i].innerHTML.trim() == choosen_club.trim()) 
         {
-          product_club_name[i].parentElement.style.display = "block";
           club_filter[i] = true;
           console.log("Filtr klubów", i, club_filter);
         }
         else 
         {
-          product_club_name[i].parentElement.style.display = "none";
           club_filter[i] = false;
           console.log("Filtr klubów", i, club_filter);
         }
+    }
+
+    if (category_filter_indicator == true)
+    {
+      for (i=0; i<product_club_name.length; i++)
+      {
+        if (club_filter[i] == true && category_filter[i] == true)
+        {
+          product_club_name[i].parentElement.style.display = "block";
+        }
+        else product_club_name[i].parentElement.style.display = "none";
       }
     }
-  }
-  else
-  {
-   for (i=0; i<product_club_name.length; i++)
+    else
     {
-        if (product_club_name[i].innerHTML.trim() == choosen_club.trim()) 
-        {
-          product_club_name[i].parentElement.style.display = "block";
-          club_filter[i] = true;
-          console.log("Filtr klubów", i, club_filter);
-        }
-        else 
-        {
-          product_club_name[i].parentElement.style.display = "none";
-          club_filter[i] = false;
-          console.log("Filtr klubów", i, club_filter);
-        }
+      for (i=0; i<product_club_name.length; i++)
+      {
+        if (club_filter[i] == true) product_club_name[i].parentElement.style.display = "block";
+        else product_club_name[i].parentElement.style.display = "none";
+      }
     }
-  }
-  
+
   for(i=0; i<document.getElementsByClassName("club-filter-clearing").length; i++)
   {
   document.getElementsByClassName("club-filter-clearing")[i].style.display = "none";
@@ -88,45 +82,39 @@ function category_choice(nr)
  
   category_filter_indicator = true;
 
-  if (club_filter_indicator == true)
-  {
-    for (i=0; i<category_name.length; i++)
+  for (i=0; i<category_name.length; i++)
     {
-      if (club_filter[i] == true)
-      {
         if (category_name[i].className.substring(8) == choosen_category.className.substring(14)) 
         {
-          category_name[i].style.display = "block";
           category_filter[i] = true;
-          console.log("Filtr kategorii", i, category_filter);
+          console.log("Filtr klubów", i, category_filter);
         }
         else 
         {
-          category_name[i].style.display = "none";
           category_filter[i] = false;
-          console.log("Filtr kategorii", i, category_filter);
+          console.log("Filtr klubów", i, category_filter);
         }
-      }
     }
-  }
-  else
-  {
-    for (i=0; i<category_name.length; i++)
+
+    if (club_filter_indicator == true)
     {
-      if (category_name[i].className.substring(8) == choosen_category.className.substring(14)) 
+      for (i=0; i<category_name.length; i++)
       {
-        category_name[i].style.display = "block";
-        category_filter[i] = true;
-        console.log("Filtr kategorii", i, category_filter);
-      }
-      else 
-      {
-        category_name[i].style.display = "none";
-        category_filter[i] = false;
-        console.log("Filtr kategorii", i, category_filter);
+        if (club_filter[i] == true && category_filter[i] == true)
+        {
+          category_name[i].style.display = "block";
+        }
+        else category_name[i].style.display = "none";
       }
     }
-  }
+    else
+    {
+      for (i=0; i<category_name.length; i++)
+      {
+        if (category_filter[i] == true) category_name[i].style.display = "block";
+        else category_name[i].style.display = "none";
+      }
+    }
 
   for(i=0; i<document.getElementsByClassName("category-filter-clearing").length; i++)
   {
@@ -147,9 +135,17 @@ function clear_club_filters()
 {
   club_filter_indicator = false;
 
+  if (category_filter_indicator == true)
+  {
+    for(i=0; i<document.getElementsByClassName("product").length; i++)
+    {
+     if (category_filter[i] == true) document.getElementsByClassName("product")[i].style.display = "block";
+    }
+  }
+  else
   for(i=0; i<document.getElementsByClassName("product").length; i++)
   {
-    /*if (category_filter[i] == true)*/ document.getElementsByClassName("product")[i].style.display = "block";
+  document.getElementsByClassName("product")[i].style.display = "block";
   }
 
   for(i=0; i<document.getElementsByClassName("club-filter-clearing").length; i++)
