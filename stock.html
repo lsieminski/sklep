@@ -247,36 +247,54 @@
                         Wybierz klub
                 </div>
                             <ul class="club-choice">
-                                <li id="club-0" onclick="club_choice(0)">Cracovia</li>
-                                <li id="club-1" onclick="club_choice(1)">Lech Poznań</li>
-                                <li id="club-2" onclick="club_choice(2)">Legia Warszawa</li>
-                                <li id="club-3" onclick="club_choice(3)">Wisła Kraków</li>
-                                <li id="club-4" onclick="club_choice(4)">Śląsk Wrocław</li>
+                                <div class="club-filter-clearing" onclick="clear_club_filters()">X</div>
+                                <li id="club-0" class="club-item" onclick="club_choice(0)">Cracovia</li>
+                                <div class="club-filter-clearing" onclick="clear_club_filters()">X</div>
+                                <li id="club-1" class="club-item" onclick="club_choice(1)">Lech Poznań</li>
+                                <div class="club-filter-clearing" onclick="clear_club_filters()">X</div>
+                                <li id="club-2" class="club-item" onclick="club_choice(2)">Legia Warszawa</li>
+                                <div class="club-filter-clearing" onclick="clear_club_filters()">X</div>
+                                <li id="club-3" class="club-item" onclick="club_choice(3)">Wisła Kraków</li>
+                                <div class="club-filter-clearing" onclick="clear_club_filters()">X</div>
+                                <li id="club-4" class="club-item" onclick="club_choice(4)">Śląsk Wrocław</li>
                             </ul>
                     <div class="block-title">
                         Wybierz kategorie
                 </div>
                     <ul class="category">
                         <div class="expand-button" onclick="expander(0)">+</div>
-                        <li id="category-0">Stroje meczowe
+                        <li id="category-0">
+                            <div class="category-filter-clearing" onclick="clear_category_filters()">X</div>
+                            <div class="category-title">Stroje meczowe</div>
                             <ul class="category-choice">
-                                <li id="category-1" class="koszulki" onclick="category_choice(1)">Koszulki</li>
-                                <li id="category-2" class="spodenki" onclick="category_choice(2)">Spodenki i getry</li>
+                                <div class="category-filter-clearing" onclick="clear_category_filters()">X</div>
+                                <li id="category-1" class="category-item koszulki" onclick="category_choice(1)">Koszulki</li>
+                                <div class="category-filter-clearing" onclick="clear_category_filters()">X</div>
+                                <li id="category-2" class="category-item spodenki" onclick="category_choice(2)">Spodenki i getry</li>
                             </ul>
                         </li>
                         <div class="expand-button" onclick="expander(1)">+</div>
-                        <li id="category-3">Odzież
+                        <li id="category-3">
+                            <div class="category-filter-clearing" onclick="clear_category_filters()">X</div>
+                            <div class="category-title">Odzież</div>
                             <ul class="category-choice">
-                                <li id="category-4" class="t-shirty" onclick="category_choice(4)">T-shirty</li>
-                                <li id="category-5" class="bluzy" onclick="category_choice(5)">Bluzy</li>
+                                <div class="category-filter-clearing" onclick="clear_category_filters()">X</div>
+                                <li id="category-4" class="category-item t-shirty" onclick="category_choice(4)">T-shirty</li>
+                                <div class="category-filter-clearing" onclick="clear_category_filters()">X</div>
+                                <li id="category-5" class="category-item bluzy" onclick="category_choice(5)">Bluzy</li>
                             </ul>
                         </li>
                         <div class="expand-button" onclick="expander(2)">+</div>
-                        <li>Akcesoria
+                        <li id="category-6">
+                            <div class="category-filter-clearing" onclick="clear_category_filters()">X</div>
+                            <div class="category-title">Akcesoria</div>
                             <ul class="category-choice">
-                                <li>Szaliki</li>
-                                <li>Flagi</li>
-                                <li>Gadżety</li>
+                                <div class="category-filter-clearing" onclick="clear_category_filters()">X</div>
+                                <li id="category-7" class="category-item szaliki" onclick="category_choice(7)">Szaliki</li>
+                                <div class="category-filter-clearing" onclick="clear_category_filters()">X</div>
+                                <li id="category-8" class="category-item flagi" onclick="category_choice(8)">Flagi</li>
+                                <div class="category-filter-clearing" onclick="clear_category_filters()">X</div>
+                                <li id="category-9" class="category-item gadzety" onclick="category_choice(9)">Gadżety</li>
                             </ul>
                         </li>    
                     </ul>
@@ -313,7 +331,7 @@
                         <span class="product-price-currency">zł</span>
                     </div>
                 </div>
-                <div class="product">
+                <div class="product szaliki">
                     <div class="product-photo">
                         <img src="img/Products/lech-koszulka-domowa.jpg">
                     </div>

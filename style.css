@@ -400,7 +400,6 @@ a.club-link
 .category > li
 {
     margin-bottom: 5px;
-    padding-bottom: 5px;
     border-bottom: 1px solid #ccc;
     font-weight: 700;
     font-size: 16px;
@@ -421,9 +420,23 @@ a.club-link
 {
     border-bottom: 1px solid #ccc;
     padding-bottom: 2px;
+    margin-top: 2px;
 }
 
 .club-choice > li:hover
+{
+    color: #ff3333;
+    cursor: pointer;
+}
+
+.category-title
+{
+    padding-bottom: 2px;
+    padding-top: 2px;
+    margin-bottom: 3px;
+}
+
+.category-title:hover
 {
     color: #ff3333;
     cursor: pointer;
@@ -442,8 +455,7 @@ a.club-link
 .category-choice > li
 {
     border-top: 1px solid #ccc;
-    padding-left: 20px;
-    padding-bottom: 2px;
+    padding: 2px 0 2px 20px;
 }
 
 .category-choice > li:hover
@@ -452,16 +464,17 @@ a.club-link
     cursor: pointer;
 }
 
-.category-choice > li:first-child
+/*.category-choice > li:first-child
 {
     margin-top: 5px;
 }
-
+*/
 .expand-button
 {
     float: left;
     cursor: pointer;
     margin-right: 4px;
+    margin-top: 3px;
     width: 15px;
     border: 1px solid #999;
     border-radius: 5px;
@@ -469,6 +482,18 @@ a.club-link
     background-color: #f3f3f3;
     text-align: center;
 }
+
+.category-filter-clearing, .club-filter-clearing
+{
+    float: right;
+    padding: 2px 2px 0 5px;
+    color: #ff3333;
+    cursor: pointer;
+    display: none;
+    font-weight: 700;
+}
+
+/* Products in stock section*/
 
 .products-container
 {
