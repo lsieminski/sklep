@@ -3,6 +3,33 @@ var club_filter_indicator = false;
 var category_filter = new Array;
 var category_filter_indicator = false;
 
+function start()
+{
+  var hash = window.location.hash;
+
+  if(hash.length == 2)
+  {
+    club_choice(hash.substring(1,2));
+  }
+  if(hash.length == 4)
+  {
+    club_choice(hash.substring(1,2));
+    category_choice(hash.substring(3,4));
+  }
+  if(hash.length == 6)
+  {
+    club_choice(hash.substring(1,2));
+    category_choice(hash.substring(3,4));
+    expander(hash.substring(5,6));
+  }
+
+  /*
+  var stateObj = { id: "100" };
+  window.history.replaceState(stateObj, "Stock", "/stock.html");
+  */
+}
+
+
 function expander(nr)
 {
   var subcategories = document.getElementsByClassName("category-choice")[nr];

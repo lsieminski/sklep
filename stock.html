@@ -11,6 +11,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet"> 
 
     <script src="stock.js"></script>
+    <script>
+        window.onload = start;
+    </script>
 
 </head>
 <body>
@@ -57,7 +60,7 @@
     <nav class="topnav">
         <ul class="menu">
             <li>
-                <a href ="#Cracovia" class="menu-club-link">
+                <a href ="#" class="menu-club-link" onclick="club_choice(0), clear_category_filters()">
                     <img class="nav-img" src="img/Banners/cracovia-logo.png">
                     Cracovia
                 </a>
@@ -66,25 +69,25 @@
                             <div class="nav-container">
                                 <div class="nav-container-center">
                                     <div class="nav-choice">
-                                        <h4><a href ="#Strojemeczowe">Stroje meczowe</a></h4>
+                                        <h4><a href ="#" onclick="club_choice(0), category_choice(0)">Stroje meczowe</a></h4>
                                         <ul>
-                                            <li><a href="#Koszulki">Koszulki</a></li>
-                                            <li><a href="#Spodenkiigetry">Spodenki i getry</a></li>
+                                            <li><a href="#" onclick="club_choice(0), category_choice(1), expander(0)">Koszulki</a></li>
+                                            <li><a href="#" onclick="club_choice(0), category_choice(2), expander(0)">Spodenki i getry</a></li>
                                         </ul>
                                     </div>
                                     <div class="nav-choice">
-                                        <h4><a href ="#Odziez">Odzież</a></h4>
+                                        <h4><a href ="#" onclick="club_choice(0), category_choice(3)">Odzież</a></h4>
                                         <ul>
-                                            <li><a href="#T-shirty">T-shirty</a></li>
-                                            <li><a href="#Bluzy">Bluzy</a></li>
+                                            <li><a href="#" onclick="club_choice(0), category_choice(4), expander(1)">T-shirty</a></li>
+                                            <li><a href="#" onclick="club_choice(0), category_choice(5), expander(1)">Bluzy</a></li>
                                         </ul>
                                     </div>
                                     <div class="nav-choice">
-                                        <h4><a href ="#Akcesoria">Akcesoria</a></h4>
+                                        <h4><a href ="#" onclick="club_choice(0), category_choice(6)">Akcesoria</a></h4>
                                         <ul>
-                                            <li><a href="#Szaliki">Szaliki</a></li>
-                                            <li><a href="#Flagi">Flagi</a></li>
-                                            <li><a href="#Gadzety">Gadżety</a></li>
+                                            <li><a href="#" onclick="club_choice(0), category_choice(7), expander(2)">Szaliki</a></li>
+                                            <li><a href="#" onclick="club_choice(0), category_choice(8), expander(2)">Flagi</a></li>
+                                            <li><a href="#" onclick="club_choice(0), category_choice(9), expander(2)">Gadżety</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -93,7 +96,7 @@
                     </ul>
             </li>
             <li>
-                <a href ="#Lech" class="menu-club-link">
+                <a href ="#" class="menu-club-link" onclick="club_choice(1), clear_category_filters()">
                 <img class="nav-img" src="img/Banners/lech-logo.png">
                 Lech Poznań
                 </a>
@@ -102,25 +105,25 @@
                         <div class="nav-container">
                             <div class="nav-container-center">
                                 <div class="nav-choice">
-                                    <h4><a href ="#Strojemeczowe">Stroje meczowe</a></h4>
+                                    <h4><a href ="#" onclick="club_choice(1), category_choice(0)">Stroje meczowe</a></h4>
                                     <ul>
-                                        <li><a href="#Koszulki">Koszulki</a></li>
-                                        <li><a href="#Spodenkiigetry">Spodenki i getry</a></li>
+                                        <li><a href="#" onclick="club_choice(1), category_choice(1), expander(0)">Koszulki</a></li>
+                                        <li><a href="#" onclick="club_choice(1), category_choice(2), expander(0)">Spodenki i getry</a></li>
                                     </ul>
                                 </div>
                                 <div class="nav-choice">
-                                    <h4><a href ="#Odziez">Odzież</a></h4>
+                                    <h4><a href ="#" onclick="club_choice(1), category_choice(3)">Odzież</a></h4>
                                     <ul>
-                                        <li><a href="#T-shirty">T-shirty</a></li>
-                                        <li><a href="#Bluzy">Bluzy</a></li>
+                                        <li><a href="#" onclick="club_choice(1), category_choice(4), expander(1)">T-shirty</a></li>
+                                        <li><a href="#" onclick="club_choice(1), category_choice(5), expander(1)">Bluzy</a></li>
                                     </ul>
                                 </div>
                                 <div class="nav-choice">
-                                    <h4><a href ="#Akcesoria">Akcesoria</a></h4>
+                                    <h4><a href ="#" onclick="club_choice(1), category_choice(6)">Akcesoria</a></h4>
                                     <ul>
-                                        <li><a href="#Szaliki">Szaliki</a></li>
-                                        <li><a href="#Flagi">Flagi</a></li>
-                                        <li><a href="#Gadzety">Gadżety</a></li>
+                                        <li><a href="#" onclick="club_choice(1), category_choice(7), expander(2)">Szaliki</a></li>
+                                        <li><a href="#" onclick="club_choice(1), category_choice(8), expander(2)">Flagi</a></li>
+                                        <li><a href="#" onclick="club_choice(1), category_choice(9), expander(2)">Gadżety</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -129,7 +132,7 @@
                 </ul>
             </li>
             <li>
-                <a href ="#Legia" class="menu-club-link">
+                <a href ="#" class="menu-club-link" onclick="club_choice(2), clear_category_filters()">
                 <img class="nav-img" src="img/Banners/legia-logo.png">
                 Legia Warszawa
                 </a>
@@ -138,25 +141,25 @@
                         <div class="nav-container">
                             <div class="nav-container-center">
                                 <div class="nav-choice">
-                                    <h4><a href ="#Strojemeczowe">Stroje meczowe</a></h4>
+                                    <h4><a href ="#" onclick="club_choice(2), category_choice(0)">Stroje meczowe</a></h4>
                                     <ul>
-                                        <li><a href="#Koszulki">Koszulki</a></li>
-                                        <li><a href="#Spodenkiigetry">Spodenki i getry</a></li>
+                                        <li><a href="#" onclick="club_choice(2), category_choice(1), expander(0)">Koszulki</a></li>
+                                        <li><a href="#" onclick="club_choice(2), category_choice(2), expander(0)">Spodenki i getry</a></li>
                                     </ul>
                                 </div>
                                 <div class="nav-choice">
-                                    <h4><a href ="#Odziez">Odzież</a></h4>
+                                    <h4><a href ="#" onclick="club_choice(2), category_choice(3)">Odzież</a></h4>
                                     <ul>
-                                        <li><a href="#T-shirty">T-shirty</a></li>
-                                        <li><a href="#Bluzy">Bluzy</a></li>
+                                        <li><a href="#" onclick="club_choice(2), category_choice(4), expander(1)">T-shirty</a></li>
+                                        <li><a href="#" onclick="club_choice(2), category_choice(5), expander(1)">Bluzy</a></li>
                                     </ul>
                                 </div>
                                 <div class="nav-choice">
-                                    <h4><a href ="#Akcesoria">Akcesoria</a></h4>
+                                    <h4><a href ="#" onclick="club_choice(2), category_choice(6)">Akcesoria</a></h4>
                                     <ul>
-                                        <li><a href="#Szaliki">Szaliki</a></li>
-                                        <li><a href="#Flagi">Flagi</a></li>
-                                        <li><a href="#Gadzety">Gadżety</a></li>
+                                        <li><a href="#" onclick="club_choice(2), category_choice(7), expander(2)">Szaliki</a></li>
+                                        <li><a href="#" onclick="club_choice(2), category_choice(8), expander(2)">Flagi</a></li>
+                                        <li><a href="#" onclick="club_choice(2), category_choice(9), expander(2)">Gadżety</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -165,7 +168,7 @@
                 </ul>
             </li>
             <li>
-                <a href ="#Wisla" class="menu-club-link">
+                <a href ="#" class="menu-club-link" onclick="club_choice(3), clear_category_filters()">
                 <img class="nav-img" src="img/Banners/wisla-logo.png">
                 Wisła Kraków
                 </a>
@@ -174,25 +177,25 @@
                         <div class="nav-container">
                             <div class="nav-container-center">
                                 <div class="nav-choice">
-                                    <h4><a href ="#Strojemeczowe">Stroje meczowe</a></h4>
+                                    <h4><a href ="#" onclick="club_choice(3), category_choice(0)">Stroje meczowe</a></h4>
                                     <ul>
-                                        <li><a href="#Koszulki">Koszulki</a></li>
-                                        <li><a href="#Spodenkiigetry">Spodenki i getry</a></li>
+                                        <li><a href="#" onclick="club_choice(3), category_choice(1), expander(0)">Koszulki</a></li>
+                                        <li><a href="#" onclick="club_choice(3), category_choice(2), expander(0)">Spodenki i getry</a></li>
                                     </ul>
                                 </div>
                                 <div class="nav-choice">
-                                    <h4><a href ="#Odziez">Odzież</a></h4>
+                                    <h4><a href ="#" onclick="club_choice(3), category_choice(3)">Odzież</a></h4>
                                     <ul>
-                                        <li><a href="#T-shirty">T-shirty</a></li>
-                                        <li><a href="#Bluzy">Bluzy</a></li>
+                                        <li><a href="#" onclick="club_choice(3), category_choice(4), expander(1)">T-shirty</a></li>
+                                        <li><a href="#" onclick="club_choice(3), category_choice(5), expander(1)">Bluzy</a></li>
                                     </ul>
                                 </div>
                                 <div class="nav-choice">
-                                    <h4><a href ="#Akcesoria">Akcesoria</a></h4>
+                                    <h4><a href ="#" onclick="club_choice(3), category_choice(6)">Akcesoria</a></h4>
                                     <ul>
-                                        <li><a href="#Szaliki">Szaliki</a></li>
-                                        <li><a href="#Flagi">Flagi</a></li>
-                                        <li><a href="#Gadzety">Gadżety</a></li>
+                                        <li><a href="#" onclick="club_choice(3), category_choice(7), expander(2)">Szaliki</a></li>
+                                        <li><a href="#" onclick="club_choice(3), category_choice(8), expander(2)">Flagi</a></li>
+                                        <li><a href="#" onclick="club_choice(3), category_choice(9), expander(2)">Gadżety</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -201,7 +204,7 @@
                 </ul>
             </li>
             <li>
-                <a href ="#Slask" class="menu-club-link">
+                <a href ="#" class="menu-club-link" onclick="club_choice(4), clear_category_filters()">
                 <img class="nav-img" src="img/Banners/slask-logo.png">
                 Śląsk Wrocław
                 </a>
@@ -210,25 +213,25 @@
                         <div class="nav-container">
                             <div class="nav-container-center">
                                 <div class="nav-choice">
-                                    <h4><a href ="#Strojemeczowe">Stroje meczowe</a></h4>
+                                    <h4><a href ="#" onclick="club_choice(4), category_choice(0)">Stroje meczowe</a></h4>
                                     <ul>
-                                        <li><a href="#Koszulki">Koszulki</a></li>
-                                        <li><a href="#Spodenkiigetry">Spodenki i getry</a></li>
+                                        <li><a href="#" onclick="club_choice(4), category_choice(1), expander(0)">Koszulki</a></li>
+                                        <li><a href="#" onclick="club_choice(4), category_choice(2), expander(0)">Spodenki i getry</a></li>
                                     </ul>
                                 </div>
                                 <div class="nav-choice">
-                                    <h4><a href ="#Odziez">Odzież</a></h4>
+                                    <h4><a href ="#" onclick="club_choice(4), category_choice(3)">Odzież</a></h4>
                                     <ul>
-                                        <li><a href="#T-shirty">T-shirty</a></li>
-                                        <li><a href="#Bluzy">Bluzy</a></li>
+                                        <li><a href="#" onclick="club_choice(4), category_choice(4), expander(1)">T-shirty</a></li>
+                                        <li><a href="#" onclick="club_choice(4), category_choice(5), expander(1)">Bluzy</a></li>
                                     </ul>
                                 </div>
                                 <div class="nav-choice">
-                                    <h4><a href ="#Akcesoria">Akcesoria</a></h4>
+                                    <h4><a href ="#" onclick="club_choice(4), category_choice(6)">Akcesoria</a></h4>
                                     <ul>
-                                        <li><a href="#Szaliki">Szaliki</a></li>
-                                        <li><a href="#Flagi">Flagi</a></li>
-                                        <li><a href="#Gadzety">Gadżety</a></li>
+                                        <li><a href="#" onclick="club_choice(4), category_choice(7), expander(2)">Szaliki</a></li>
+                                        <li><a href="#" onclick="club_choice(4), category_choice(8), expander(2)">Flagi</a></li>
+                                        <li><a href="#" onclick="club_choice(4), category_choice(9), expander(2)">Gadżety</a></li>
                                     </ul>
                                 </div>
                             </div>
