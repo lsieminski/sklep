@@ -255,3 +255,32 @@ function clear_category_filters()
   document.getElementsByClassName("category-filter-clearing")[i].nextElementSibling.style.color = "#001e3c";
   }
 }
+
+// Adding items to cart
+const items = document.querySelectorAll('.product');
+let inCart = JSON.parse(window.localStorage.getItem('itemsInCart'));
+// let inCart = [];
+const quantityInCart = document.querySelector("#cart > li:nth-child(2)");
+
+if (inCart.length > 0) 
+{
+  quantityInCart.innerText = `Produkty: ${inCart.length}`;
+}
+
+items.forEach((item, i) => {
+  item.id = `item-${i}`;
+
+  item.addEventListener('click', () => {
+    if (!inCart.includes(item.id))
+    {
+       inCart.push(item.id);
+    }
+    window.localStorage.setItem('itemsInCart', JSON.stringify(inCart));
+    //console.log(inCart);
+
+    if (inCart.length > 0) 
+    {
+      quantityInCart.innerText = `Produkty: ${inCart.length}`;
+    }
+  });
+});
