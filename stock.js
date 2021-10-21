@@ -257,9 +257,9 @@ function clear_category_filters()
 }
 
 // Adding items to cart
-const items = document.querySelectorAll('.product');
-let inCart = JSON.parse(window.localStorage.getItem('itemsInCart'));
-// let inCart = [];
+const items = document.querySelectorAll('.add-button');
+// let inCart = JSON.parse(window.localStorage.getItem('itemsInCart'));
+let inCart = [];
 const quantityInCart = document.querySelector("#cart > li:nth-child(2)");
 
 if (inCart.length > 0) 
@@ -276,7 +276,7 @@ items.forEach((item, i) => {
        inCart.push(item.id);
     }
     window.localStorage.setItem('itemsInCart', JSON.stringify(inCart));
-    //console.log(inCart);
+    console.log(inCart);
 
     if (inCart.length > 0) 
     {

@@ -533,12 +533,60 @@ a.club-link
     box-shadow: 0 8px 16px 0 rgba(0,30,60,.25);
 }
 
+.product-photo
+{
+    position: relative;
+}
+
 .product-photo > img
 {
     width: 238px;
     height: 240px;
     border-radius: 5px 5px 0 0;
     border-bottom: 1px solid #999;
+}
+
+.add-button-box
+{
+    position: absolute;
+    margin: 0;
+    width: 100%;
+    height: 60px;
+    background-color: rgba(0, 0, 0, 0.2);
+    left: 0px;
+    top: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.product:hover > .product-photo > .add-button-box
+{
+    opacity: 1;
+}
+
+
+.add-button
+{
+    color: #fff;
+    /* background-color: #001e3c; */
+    background-color: #ee2222;
+    width: 80%;
+    height: 70%;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 5px;
+}
+
+.add-button:hover
+{
+    /* background-color: #003cb4; */
+    background-color: #ff3333;
+    cursor: pointer;
 }
 
 .product-club-name
