@@ -40,13 +40,11 @@
                     <li>Rejestracja</li>
                     <li>Logowanie</li>
                     <li>
-                        <a href="cart.html" title="Przejdź do koszyka">
                         <img id="cart-icon" src="img/cart-icon.png">
                         <ul id="cart">
                             <li>0,00 zł</li>
                             <li>Pusty koszyk</li>
                         </ul>
-                        </a>
                     </li>
                 </ul>
             </div>
@@ -241,90 +239,54 @@
     
     <main>
         <div class="container">
-            <div class="description">
-                Witaj na stronie sklepu kibica Ekstraklasy. Znajdziesz tutaj najnowsze produkty dla wybranych klubów. Sprawdź naszą ofertę na sezon 2021/22!
-            </div>
-            <div class="main-banner">
-                <a href="stock.html"><img class="main-img" src="img/nowosci.jpg"></a>
-            </div>
-            <div class="description">
-                A może interesuje Cię konkretny klub? Śmiało, wybierz zespół z dostępnych poniżej!
-            </div>
-            <div class="club-banner">
-                <a class="club-link" href="stock.html#0">   
-                    <div class="club-label">
-                        <div class="club-logo">
-                            <img src="img/Banners/cracovia-logo.png">
-                        </div>
-                        <div class="club-name">
-                            <p>Cracovia</p>
-                        </div>
-                    </div>
-                    <div class="club-photo">
-                        <img src="img/Banners/cracovia-photo.jpg">
-                    </div>
-                </a>    
-            </div>
-            <div class="container">
-                <div class="club-banner">
-                    <a class="club-link" href="stock.html#1">
-                        <div class="club-label">
-                            <div class="club-logo">
-                                <img src="img/Banners/lech-logo.png">
-                            </div>
-                            <div class="club-name">
-                                <p>Lech Poznań</p>
-                            </div>
-                        </div>
-                        <div class="club-photo">
-                            <img src="img/Banners/lech-photo.jpg">
-                        </div>
-                    </a>    
+            <div class="empty-cart">
+                <div class="empty-cart-img"><img src="img/cart-icon.png"></div>
+                <div class=empty-cart-description>
+                    <h4>Koszyk jest pusty</h4>
+                    <p>Nie masz produktów w koszyku.</p>
+                    <p><a href="stock.html">Kliknij tutaj, aby kontynować zakupy.</a></p>
                 </div>
-            <div class="club-banner">
-                <a class="club-link" href="stock.html#2">
-                    <div class="club-label">
-                        <div class="club-logo">
-                            <img src="img/Banners/legia-logo.png">
-                        </div>
-                        <div class="club-name">
-                            <p>Legia Warszawa</p>
-                        </div>
-                    </div>
-                    <div class="club-photo">
-                        <img src="img/Banners/legia-photo.jpeg">
-                    </div>
-                </a>    
+                <div style="clear: both"></div>
             </div>
-            <div class="club-banner">
-                <a class="club-link" href="stock.html#3">   
-                    <div class="club-label">
-                        <div class="club-logo">
-                            <img src="img/Banners/wisla-logo.png">
+            <div class="filled-cart">
+                <div class="cart-items"></div>
+                <div class="cart-summary">
+                    <h4>Podsumowanie</h4>
+                    <div class="summary-row">
+                        <div class="summary-text">Suma brutto</div>
+                        <div class="summary-price">
+                            <span class="summary-price-value">500</span>
+                            <span class="summary-price-currency">PLN</span>
                         </div>
-                        <div class="club-name">
-                            <p>Wisła Kraków</p>
+                        <div style="clear: both"></div>
+                    </div>
+                    <div class="summary-row">
+                        <div class="summary-text">w tym VAT</div>
+                        <div class="summary-price">
+                            <span class="summary-price-value">500</span>
+                            <span class="summary-price-currency">PLN</span>
                         </div>
+                        <div style="clear: both"></div>
                     </div>
-                    <div class="club-photo">
-                        <img src="img/Banners/wisla-photo.jpg">
-                    </div>
-                </a>    
-            </div>
-            <div class="club-banner">
-                <a class="club-link" href="stock.html#4">   
-                    <div class="club-label">
-                        <div class="club-logo">
-                            <img src="img/Banners/slask-logo.png">
+                    <div class="summary-row">
+                        <div class="summary-text">Koszt dostawy</div>
+                        <div class="summary-price">
+                            <span class="summary-price-value">500</span>
+                            <span class="summary-price-currency">PLN</span>
                         </div>
-                        <div class="club-name">
-                            <p>Śląsk Wrocław</p>
+                        <div style="clear: both"></div>
+                    </div>
+                    <div class="summary-row" style="font-weight: bold">
+                        <div class="summary-text">Razem</div>
+                        <div class="summary-price">
+                            <span class="summary-price-value">500</span>
+                            <span class="summary-price-currency">PLN</span>
                         </div>
+                        <div style="clear: both"></div>
                     </div>
-                    <div class="club-photo">
-                        <img src="img/Banners/slask-photo.jpg">
-                    </div>
-                </a>    
+                    <div class="checkout-button">Złóż zamówienie</div>
+                </div>
+                <div style="clear: both"></div>
             </div>
         </div>
     </main>
