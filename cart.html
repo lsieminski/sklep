@@ -41,11 +41,13 @@
                     <li>Rejestracja</li>
                     <li>Logowanie</li>
                     <li>
+                        <a href="cart.html" title="Przejdź do koszyka">
                         <img id="cart-icon" src="img/cart-icon.png">
                         <ul id="cart">
                             <li>0,00 zł</li>
                             <li>Pusty koszyk</li>
                         </ul>
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -250,7 +252,78 @@
                 <div style="clear: both"></div>
             </div>
             <div class="filled-cart">
-                <div class="cart-items"></div>
+                <div class="cart-items">
+                    <div class="cart-items-title">
+                        <h4>Zawartość koszyka</h4>
+                    </div>
+                    <table class="cart-items-table">
+                        <thead>
+                            <tr>
+                                <th class="column-1"></th>
+                                <th class="column-2">Produkt</th>
+                                <th class="column-3">Cena za szt.</th>
+                                <th class="column-4">Ilość</th>
+                                <th class="column-5">Razem</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="cart-product-img">
+                                    <img src="img/Products/legia-koszulka-wyjazdowa.jpg">
+                                </td>
+                                <td class="cart-product">
+                                    <div class="cart-product-description">Koszulka wyjazdowa 2021/22</div>
+                                    <div class="cart-product-club">Legia Warszawa</div>
+                                    </br></br>
+                                    <div class="remove-item"><span>usuń</span></div>
+                                </td>
+                                <td class="unit-price">
+                                    <span>500</span>
+                                    <span>PLN</span>
+                                </td>
+                                <td class="quantity">
+                                    <select>
+                                        <option selected>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                    </select>
+                                </td>
+                                <td class="unit-price-total">
+                                    <span>500</span>
+                                    <span>PLN</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cart-product-img">
+                                    <img src="img/Products/legia-koszulka-wyjazdowa.jpg">
+                                </td>
+                                <td class="cart-product">
+                                    <div class="cart-product-description">Koszulka wyjazdowa 2021/22</div>
+                                    <div class="cart-product-club">Legia Warszawa</div>
+                                    </br></br>
+                                    <div class="remove-item"><span>usuń</span></div>
+                                </td>
+                                <td class="unit-price">
+                                    <span>500</span>
+                                    <span>PLN</span>
+                                </td>
+                                <td class="quantity">
+                                    <select>
+                                        <option selected>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                    </select>
+                                </td>
+                                <td class="unit-price-total">
+                                    <span>500</span>
+                                    <span>PLN</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
                 <div class="cart-summary">
                     <h4>Podsumowanie</h4>
                     <div class="summary-row">
