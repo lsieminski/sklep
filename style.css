@@ -1,15 +1,28 @@
 body
 {
+    height: 100%;
     background-color: #f1f1f1;
     margin: 0;
     font-family: 'Lato', sans-serif;
     font-size: 20px;
 }
 
+html
+{
+    height: 100%;
+}
+
 a
 {
     text-decoration: none;
     color:#001e3c;
+}
+
+#wrapper
+{
+    width: 100%;
+    margin: 0;
+    min-height: calc(100% - 311px);
 }
 
 /* Header bar section */
@@ -398,10 +411,11 @@ a.club-link
     float: left;
     background-color: #fff;
     width: 218px;
-    height: 800px;
+    height: 738px;
     border: 1px solid #999;
     border-radius: 5px;
     margin-top: 20px;
+    box-shadow: 0 8px 16px 0 rgba(0,30,60,.25);
 }
 
 .block-title
@@ -748,7 +762,8 @@ a.club-link
 #footer
 {
     width: 100%;
-    background-color: #001e3c; 
+    background-color: #001e3c;
+    margin-top: 20px;
 }
 
 #topfooter
@@ -756,7 +771,6 @@ a.club-link
     width: 1000px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 20px;
 }
 
 .footer-info
