@@ -631,7 +631,7 @@ a.club-link
 
 /* Shoping cart section */
 
-.empty-cart
+#empty-cart
 {
     width: 1000px;
     height: 100px;
@@ -684,7 +684,7 @@ a.club-link
     text-decoration: underline;
 }
 
-.filled-cart
+#filled-cart
 {
     width: 1000px;
     margin-top: 40px;

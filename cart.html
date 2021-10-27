@@ -242,7 +242,7 @@
     
     <main>
         <div class="container">
-            <div class="empty-cart">
+            <div id="empty-cart">
                 <div class="empty-cart-img"><img src="img/cart-icon.png"></div>
                 <div class=empty-cart-description>
                     <h4>Koszyk jest pusty</h4>
@@ -251,7 +251,7 @@
                 </div>
                 <div style="clear: both"></div>
             </div>
-            <div class="filled-cart">
+            <div id="filled-cart">
                 <div class="cart-items">
                     <div class="cart-items-title">
                         <h4>Zawartość koszyka</h4>
@@ -266,8 +266,8 @@
                                 <th class="column-5">Razem</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr>
+                        <tbody class="table-body">
+                            <!-- <tr>
                                 <td class="cart-product-img">
                                     <img src="img/Products/legia-koszulka-wyjazdowa.jpg">
                                 </td>
@@ -279,7 +279,7 @@
                                 </td>
                                 <td class="unit-price">
                                     <span>500</span>
-                                    <span>PLN</span>
+                                    <span>zł</span>
                                 </td>
                                 <td class="quantity">
                                     <select>
@@ -291,7 +291,7 @@
                                 </td>
                                 <td class="unit-price-total">
                                     <span>500</span>
-                                    <span>PLN</span>
+                                    <span>zł</span>
                                 </td>
                             </tr>
                             <tr>
@@ -306,7 +306,7 @@
                                 </td>
                                 <td class="unit-price">
                                     <span>500</span>
-                                    <span>PLN</span>
+                                    <span>zł</span>
                                 </td>
                                 <td class="quantity">
                                     <select>
@@ -318,9 +318,9 @@
                                 </td>
                                 <td class="unit-price-total">
                                     <span>500</span>
-                                    <span>PLN</span>
+                                    <span>zł</span>
                                 </td>
-                            </tr>
+                            </tr> -->
                         </tbody>
                     </table>
                 </div>
@@ -330,7 +330,7 @@
                         <div class="summary-text">Suma brutto</div>
                         <div class="summary-price">
                             <span class="summary-price-value">500</span>
-                            <span class="summary-price-currency">PLN</span>
+                            <span class="summary-price-currency">zł</span>
                         </div>
                         <div style="clear: both"></div>
                     </div>
@@ -338,7 +338,7 @@
                         <div class="summary-text">w tym VAT</div>
                         <div class="summary-price">
                             <span class="summary-price-value">500</span>
-                            <span class="summary-price-currency">PLN</span>
+                            <span class="summary-price-currency">zł</span>
                         </div>
                         <div style="clear: both"></div>
                     </div>
@@ -346,7 +346,7 @@
                         <div class="summary-text">Koszt dostawy</div>
                         <div class="summary-price">
                             <span class="summary-price-value">500</span>
-                            <span class="summary-price-currency">PLN</span>
+                            <span class="summary-price-currency">zł</span>
                         </div>
                         <div style="clear: both"></div>
                     </div>
@@ -354,7 +354,7 @@
                         <div class="summary-text">Razem</div>
                         <div class="summary-price">
                             <span class="summary-price-value">500</span>
-                            <span class="summary-price-currency">PLN</span>
+                            <span class="summary-price-currency">zł</span>
                         </div>
                         <div style="clear: both"></div>
                     </div>
@@ -438,5 +438,6 @@
         </div>
     </footer>
     <script src="stock.js"></script>
+    <script src="cart.js"></script>
 </body>
 </html>

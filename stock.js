@@ -258,29 +258,83 @@ function clear_category_filters()
 
 // Adding items to cart
 const items = document.querySelectorAll('.add-button');
-// let inCart = JSON.parse(window.localStorage.getItem('itemsInCart'));
-let inCart = [];
-const quantityInCart = document.querySelector("#cart > li:nth-child(2)");
 
+
+let inCart = JSON.parse(window.localStorage.getItem('itemsInCart'));
+let itemsPhoto = JSON.parse(window.localStorage.getItem('itemsInCartPhoto'));
+let itemsDescription = JSON.parse(window.localStorage.getItem('itemsInCartDescription'));
+let itemsClub = JSON.parse(window.localStorage.getItem('itemsInCartClub'));
+let itemsPrice = JSON.parse(window.localStorage.getItem('itemsInCartPrice'));
+
+ 
+// let inCart = [];
+// let itemsPhoto = [];
+// let itemsDescription = [];
+// let itemsClub = [];
+// let itemsPrice = [];
+
+
+
+// Shows my arrays
+console.log(inCart);
+console.log(itemsPhoto);
+console.log(itemsDescription);
+console.log(itemsClub);
+console.log(itemsPrice);
+
+// Show number of products in cart
+const quantityInCart = document.querySelector("#cart > li:nth-child(2)");
 if (inCart.length > 0) 
 {
   quantityInCart.innerText = `Produkty: ${inCart.length}`;
 }
 
+// Add id to each product
 items.forEach((item, i) => {
   item.id = `item-${i}`;
 
   item.addEventListener('click', () => {
     if (!inCart.includes(item.id))
     {
+      // Add item id to array
        inCart.push(item.id);
-    }
-    window.localStorage.setItem('itemsInCart', JSON.stringify(inCart));
-    console.log(inCart);
 
+      //  Add item img to array
+       let img = document.querySelector(`div.product:nth-child(${i+1}) > div:nth-child(1) > img:nth-child(1)`);
+       itemsPhoto.push(img.getAttribute('src'));
+
+       //  Add item description to array
+       let desc = document.querySelector(`div.product:nth-child(${i+1}) > div:nth-child(3)`);
+       itemsDescription.push(desc.innerText);
+
+        //  Add item club name to array
+        let club = document.querySelector(`div.product:nth-child(${i+1}) > div:nth-child(2)`);
+        itemsClub.push(club.innerText);
+
+        //  Add item price to array
+        let price = document.querySelector(`div.product:nth-child(${i+1}) > div:nth-child(4) > span:nth-child(1)`);
+        itemsPrice.push(price.innerText);
+    }
+
+    // Add data to local storage
+    window.localStorage.setItem('itemsInCart', JSON.stringify(inCart));
+    window.localStorage.setItem('itemsInCartPhoto', JSON.stringify(itemsPhoto));
+    window.localStorage.setItem('itemsInCartDescription', JSON.stringify(itemsDescription));
+    window.localStorage.setItem('itemsInCartClub', JSON.stringify(itemsClub));
+    window.localStorage.setItem('itemsInCartPrice', JSON.stringify(itemsPrice));
+    
+    // Shows my arrays
+    console.log(inCart);
+    console.log(itemsPhoto);
+    console.log(itemsDescription);
+    console.log(itemsClub);
+    console.log(itemsPrice);
+    
+    // Show number of products in cart
     if (inCart.length > 0) 
     {
       quantityInCart.innerText = `Produkty: ${inCart.length}`;
     }
   });
 });
+
