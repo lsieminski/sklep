@@ -262,11 +262,16 @@ const items = document.querySelectorAll('.add-button');
 
 let inCart = JSON.parse(window.localStorage.getItem('itemsInCart'));
 let itemsPhoto = JSON.parse(window.localStorage.getItem('itemsInCartPhoto'));
+let itemsPrice = JSON.parse(window.localStorage.getItem('itemsInCartPrice'));
 let itemsDescription = JSON.parse(window.localStorage.getItem('itemsInCartDescription'));
 let itemsClub = JSON.parse(window.localStorage.getItem('itemsInCartClub'));
-let itemsPrice = JSON.parse(window.localStorage.getItem('itemsInCartPrice'));
 
- 
+if (inCart == null) inCart = [];
+if (itemsPhoto == null) itemsPhoto = [];
+if (itemsPrice == null) itemsPrice = [];
+if (itemsDescription == null) itemsDescription = [];
+if (itemsClub == null) itemsClub = [];
+
 // let inCart = [];
 // let itemsPhoto = [];
 // let itemsDescription = [];
@@ -316,6 +321,7 @@ items.forEach((item, i) => {
         itemsPrice.push(price.innerText);
     }
 
+
     // Add data to local storage
     window.localStorage.setItem('itemsInCart', JSON.stringify(inCart));
     window.localStorage.setItem('itemsInCartPhoto', JSON.stringify(itemsPhoto));
@@ -329,6 +335,8 @@ items.forEach((item, i) => {
     console.log(itemsDescription);
     console.log(itemsClub);
     console.log(itemsPrice);
+
+
     
     // Show number of products in cart
     if (inCart.length > 0) 
