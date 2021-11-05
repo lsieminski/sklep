@@ -259,25 +259,28 @@ function clear_category_filters()
 // Adding items to cart
 const items = document.querySelectorAll('.add-button');
 
+//window.localStorage.clear();
 
 let inCart = JSON.parse(window.localStorage.getItem('itemsInCart'));
 let itemsPhoto = JSON.parse(window.localStorage.getItem('itemsInCartPhoto'));
 let itemsPrice = JSON.parse(window.localStorage.getItem('itemsInCartPrice'));
 let itemsDescription = JSON.parse(window.localStorage.getItem('itemsInCartDescription'));
 let itemsClub = JSON.parse(window.localStorage.getItem('itemsInCartClub'));
+let itemsQuantity = JSON.parse(window.localStorage.getItem('itemsInCartQuantity'));
 
 if (inCart == null) inCart = [];
 if (itemsPhoto == null) itemsPhoto = [];
 if (itemsPrice == null) itemsPrice = [];
 if (itemsDescription == null) itemsDescription = [];
 if (itemsClub == null) itemsClub = [];
+if (itemsQuantity == null) itemsQuantity = [];
 
 // let inCart = [];
 // let itemsPhoto = [];
 // let itemsDescription = [];
 // let itemsClub = [];
 // let itemsPrice = [];
-
+// let itemsQuantity = [];
 
 
 // Shows my arrays
@@ -286,6 +289,7 @@ console.log(itemsPhoto);
 console.log(itemsDescription);
 console.log(itemsClub);
 console.log(itemsPrice);
+console.log(itemsQuantity);
 
 // Show number of products in cart
 const quantityInCart = document.querySelector("#cart > li:nth-child(2)");
@@ -319,7 +323,11 @@ items.forEach((item, i) => {
         //  Add item price to array
         let price = document.querySelector(`div.product:nth-child(${i+1}) > div:nth-child(4) > span:nth-child(1)`);
         itemsPrice.push(price.innerText);
+
+        //  Add item quantity to array
+        itemsQuantity.push(1);
     }
+
 
 
     // Add data to local storage
@@ -328,6 +336,7 @@ items.forEach((item, i) => {
     window.localStorage.setItem('itemsInCartDescription', JSON.stringify(itemsDescription));
     window.localStorage.setItem('itemsInCartClub', JSON.stringify(itemsClub));
     window.localStorage.setItem('itemsInCartPrice', JSON.stringify(itemsPrice));
+    window.localStorage.setItem('itemsInCartQuantity', JSON.stringify(itemsQuantity));
     
     // Shows my arrays
     console.log(inCart);
@@ -335,6 +344,7 @@ items.forEach((item, i) => {
     console.log(itemsDescription);
     console.log(itemsClub);
     console.log(itemsPrice);
+    console.log(itemsQuantity);
 
 
     

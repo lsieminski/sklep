@@ -12,9 +12,27 @@ else
 // Display items in cart
 const displayItems = () => {
 let itemsHtml = ``;
+let singleItemTotalPrice = [];
+let summaryPrice = 0;
 
   for (i=0; i < inCart.length; i++)
   {
+    singleItemTotalPrice[i] = (itemsPrice[i] * itemsQuantity[i]).toFixed(2);
+    summaryPrice +=  parseFloat(singleItemTotalPrice[i]);
+  
+    let quantityChoice = ``;
+    for (j=1; j <=10; j++)
+    {
+      if (j == itemsQuantity[i])
+      { 
+        quantityChoice += `<option selected>${j}</option>`
+      }
+      else 
+      {
+      quantityChoice += `<option>${j}</option>`
+      }
+    };
+
     itemsHtml +=
     `<tr>
     <td class="cart-product-img">
@@ -31,25 +49,54 @@ let itemsHtml = ``;
         <span>zł</span>
     </td>
     <td class="quantity">
-        <select>
-            <option selected>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-        </select>
+        <select id="quantity-selector-${i}">`
+            + quantityChoice +
+        `</select>
     </td>
     <td class="unit-price-total">
-        <span>500</span>
+        <span>${singleItemTotalPrice[i]}</span>
         <span>zł</span>
     </td>
   </tr>`
   };
+  
 
 const itemsTable = document.querySelector('.table-body');
 itemsTable.innerHTML = itemsHtml;
+
+const displaySummaryPrice = document.querySelector('#display-summary-price');
+displaySummaryPrice.innerHTML = summaryPrice.toFixed(2);
+
+//In cart icon - price display
+const cartSummaryPrice = document.querySelector('#cart-summary-price');
+cartSummaryPrice.innerHTML = summaryPrice.toFixed(2);
+
+const displayVatCost = document.querySelector('#vat-cost');
+const vatValue = 1.23;
+displayVatCost.innerHTML = Math.round((summaryPrice - summaryPrice/vatValue)*100)/100;
+
+const displaydeliveryCost = document.querySelector('#delivery-cost');
+const deliveryCost = 15;
+displaydeliveryCost.innerHTML = deliveryCost.toFixed(2);
+
+const displayTotalToPay = document.querySelector('#total-to-pay');
+displayTotalToPay.innerHTML = (summaryPrice + deliveryCost).toFixed(2);
+
 };
 
 const displayItemsInCart = displayItems();
+
+// Quantity change
+const changeQuantityButtons = document.querySelectorAll('.quantity > select');
+
+changeQuantityButtons.forEach((changeQuantityButton, index) => {
+
+  changeQuantityButton.addEventListener('change', () =>{
+    itemsQuantity[index] = changeQuantityButton.value;
+    window.localStorage.setItem('itemsInCartQuantity', JSON.stringify(itemsQuantity));
+    location.reload();
+  });
+});
 
 // Remove items from cart
 const removeButtons = document.querySelectorAll('.remove-item');
@@ -63,19 +110,18 @@ removeButtons.forEach((removeButton, i) => {
     itemsDescription.splice(i, 1);
     itemsClub.splice(i, 1);
     itemsPrice.splice(i, 1);
+    itemsQuantity.splice(i, 1);
 
     window.localStorage.setItem('itemsInCart', JSON.stringify(inCart));
     window.localStorage.setItem('itemsInCartPhoto', JSON.stringify(itemsPhoto));
     window.localStorage.setItem('itemsInCartDescription', JSON.stringify(itemsDescription));
     window.localStorage.setItem('itemsInCartClub', JSON.stringify(itemsClub));
     window.localStorage.setItem('itemsInCartPrice', JSON.stringify(itemsPrice));
-
-    console.log(inCart);
-    console.log(itemsPhoto);
-    console.log(itemsDescription);
-    console.log(itemsClub);
-    console.log(itemsPrice);
+    window.localStorage.setItem('itemsInCartQuantity', JSON.stringify(itemsQuantity));
 
    location.reload();
   });
 });
+
+// Total to pay calculation
+

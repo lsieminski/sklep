@@ -44,7 +44,10 @@
                         <a href="cart.html" title="Przejdź do koszyka">
                         <img id="cart-icon" src="img/cart-icon.png">
                         <ul id="cart">
-                            <li>0,00 zł</li>
+                            <li>
+                                <span id="cart-summary-price">0.00</span>
+                                <span>zł</span>
+                            </li>
                             <li>Pusty koszyk</li>
                         </ul>
                         </a>
@@ -275,7 +278,7 @@
                     <div class="summary-row">
                         <div class="summary-text">Suma brutto</div>
                         <div class="summary-price">
-                            <span class="summary-price-value">500</span>
+                            <span id="display-summary-price" class="summary-price-value"></span>
                             <span class="summary-price-currency">zł</span>
                         </div>
                         <div style="clear: both"></div>
@@ -283,7 +286,7 @@
                     <div class="summary-row">
                         <div class="summary-text">w tym VAT</div>
                         <div class="summary-price">
-                            <span class="summary-price-value">500</span>
+                            <span id="vat-cost" class="summary-price-value"></span>
                             <span class="summary-price-currency">zł</span>
                         </div>
                         <div style="clear: both"></div>
@@ -291,7 +294,7 @@
                     <div class="summary-row">
                         <div class="summary-text">Koszt dostawy</div>
                         <div class="summary-price">
-                            <span class="summary-price-value">500</span>
+                            <span id="delivery-cost" class="summary-price-value"></span>
                             <span class="summary-price-currency">zł</span>
                         </div>
                         <div style="clear: both"></div>
@@ -299,7 +302,7 @@
                     <div class="summary-row" style="font-weight: bold">
                         <div class="summary-text">Razem</div>
                         <div class="summary-price">
-                            <span class="summary-price-value">500</span>
+                            <span id="total-to-pay" class="summary-price-value"></span>
                             <span class="summary-price-currency">zł</span>
                         </div>
                         <div style="clear: both"></div>
