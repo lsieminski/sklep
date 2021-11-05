@@ -256,10 +256,8 @@ function clear_category_filters()
   }
 }
 
-// Adding items to cart
-const items = document.querySelectorAll('.add-button');
 
-//window.localStorage.clear();
+// window.localStorage.clear();
 
 let inCart = JSON.parse(window.localStorage.getItem('itemsInCart'));
 let itemsPhoto = JSON.parse(window.localStorage.getItem('itemsInCartPhoto'));
@@ -267,6 +265,7 @@ let itemsPrice = JSON.parse(window.localStorage.getItem('itemsInCartPrice'));
 let itemsDescription = JSON.parse(window.localStorage.getItem('itemsInCartDescription'));
 let itemsClub = JSON.parse(window.localStorage.getItem('itemsInCartClub'));
 let itemsQuantity = JSON.parse(window.localStorage.getItem('itemsInCartQuantity'));
+let singleItemTotalPrice = JSON.parse(window.localStorage.getItem('singleItemTotalPrice'));
 
 if (inCart == null) inCart = [];
 if (itemsPhoto == null) itemsPhoto = [];
@@ -274,13 +273,19 @@ if (itemsPrice == null) itemsPrice = [];
 if (itemsDescription == null) itemsDescription = [];
 if (itemsClub == null) itemsClub = [];
 if (itemsQuantity == null) itemsQuantity = [];
+if (singleItemTotalPrice == null) singleItemTotalPrice = [];
 
-// let inCart = [];
-// let itemsPhoto = [];
-// let itemsDescription = [];
-// let itemsClub = [];
-// let itemsPrice = [];
-// let itemsQuantity = [];
+
+let summaryPrice = 0;
+for (i=0; i < inCart.length; i++)
+{
+  singleItemTotalPrice[i] = parseFloat(itemsPrice[i] * itemsQuantity[i]);
+  summaryPrice += singleItemTotalPrice[i];
+};
+
+//In cart icon - price display
+const cartSummaryPrice = document.querySelector('#cart-summary-price');
+cartSummaryPrice.innerHTML = summaryPrice.toFixed(2);
 
 
 // Shows my arrays
@@ -290,6 +295,8 @@ console.log(itemsDescription);
 console.log(itemsClub);
 console.log(itemsPrice);
 console.log(itemsQuantity);
+console.log(singleItemTotalPrice);
+console.log(summaryPrice);
 
 // Show number of products in cart
 const quantityInCart = document.querySelector("#cart > li:nth-child(2)");
@@ -298,7 +305,9 @@ if (inCart.length > 0)
   quantityInCart.innerText = `Produkty: ${inCart.length}`;
 }
 
-// Add id to each product
+// Adding items to cart
+const items = document.querySelectorAll('.add-button');
+
 items.forEach((item, i) => {
   item.id = `item-${i}`;
 
@@ -323,12 +332,12 @@ items.forEach((item, i) => {
         //  Add item price to array
         let price = document.querySelector(`div.product:nth-child(${i+1}) > div:nth-child(4) > span:nth-child(1)`);
         itemsPrice.push(price.innerText);
+        singleItemTotalPrice.push(parseFloat(price.innerText));
+        summaryPrice += parseFloat(price.innerText);
 
         //  Add item quantity to array
         itemsQuantity.push(1);
     }
-
-
 
     // Add data to local storage
     window.localStorage.setItem('itemsInCart', JSON.stringify(inCart));
@@ -337,6 +346,7 @@ items.forEach((item, i) => {
     window.localStorage.setItem('itemsInCartClub', JSON.stringify(itemsClub));
     window.localStorage.setItem('itemsInCartPrice', JSON.stringify(itemsPrice));
     window.localStorage.setItem('itemsInCartQuantity', JSON.stringify(itemsQuantity));
+    window.localStorage.setItem('singleItemTotalPrice', JSON.stringify(singleItemTotalPrice));
     
     // Shows my arrays
     console.log(inCart);
@@ -345,7 +355,7 @@ items.forEach((item, i) => {
     console.log(itemsClub);
     console.log(itemsPrice);
     console.log(itemsQuantity);
-
+    console.log(singleItemTotalPrice);
 
     
     // Show number of products in cart
@@ -353,6 +363,9 @@ items.forEach((item, i) => {
     {
       quantityInCart.innerText = `Produkty: ${inCart.length}`;
     }
+
+    const cartSummaryPrice = document.querySelector('#cart-summary-price');
+    cartSummaryPrice.innerHTML = summaryPrice.toFixed(2);
   });
 });
 

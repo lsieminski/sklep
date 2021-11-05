@@ -12,14 +12,9 @@ else
 // Display items in cart
 const displayItems = () => {
 let itemsHtml = ``;
-let singleItemTotalPrice = [];
-let summaryPrice = 0;
 
   for (i=0; i < inCart.length; i++)
   {
-    singleItemTotalPrice[i] = (itemsPrice[i] * itemsQuantity[i]).toFixed(2);
-    summaryPrice +=  parseFloat(singleItemTotalPrice[i]);
-  
     let quantityChoice = ``;
     for (j=1; j <=10; j++)
     {
@@ -54,7 +49,7 @@ let summaryPrice = 0;
         `</select>
     </td>
     <td class="unit-price-total">
-        <span>${singleItemTotalPrice[i]}</span>
+        <span>${(singleItemTotalPrice[i]).toFixed(2)}</span>
         <span>zł</span>
     </td>
   </tr>`
@@ -66,10 +61,6 @@ itemsTable.innerHTML = itemsHtml;
 
 const displaySummaryPrice = document.querySelector('#display-summary-price');
 displaySummaryPrice.innerHTML = summaryPrice.toFixed(2);
-
-//In cart icon - price display
-const cartSummaryPrice = document.querySelector('#cart-summary-price');
-cartSummaryPrice.innerHTML = summaryPrice.toFixed(2);
 
 const displayVatCost = document.querySelector('#vat-cost');
 const vatValue = 1.23;
@@ -111,6 +102,7 @@ removeButtons.forEach((removeButton, i) => {
     itemsClub.splice(i, 1);
     itemsPrice.splice(i, 1);
     itemsQuantity.splice(i, 1);
+    singleItemTotalPrice.splice(i, 1);
 
     window.localStorage.setItem('itemsInCart', JSON.stringify(inCart));
     window.localStorage.setItem('itemsInCartPhoto', JSON.stringify(itemsPhoto));
@@ -118,6 +110,7 @@ removeButtons.forEach((removeButton, i) => {
     window.localStorage.setItem('itemsInCartClub', JSON.stringify(itemsClub));
     window.localStorage.setItem('itemsInCartPrice', JSON.stringify(itemsPrice));
     window.localStorage.setItem('itemsInCartQuantity', JSON.stringify(itemsQuantity));
+    window.localStorage.setItem('singleItemTotalPrice', JSON.stringify(singleItemTotalPrice));
 
    location.reload();
   });
