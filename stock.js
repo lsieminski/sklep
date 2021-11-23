@@ -375,6 +375,8 @@ items.forEach((item, i) => {
 
 
 // Close message box
+if (document.getElementById('continue-shopping-button')){
 document.getElementById('continue-shopping-button').addEventListener('click', () => {
   document.querySelector('.message-container').style.display = "none";
 });
+}
