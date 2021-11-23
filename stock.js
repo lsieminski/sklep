@@ -298,6 +298,7 @@ console.log(itemsQuantity);
 console.log(singleItemTotalPrice);
 console.log(summaryPrice);
 
+
 // Show number of products in cart
 const quantityInCart = document.querySelector("#cart > li:nth-child(2)");
 if (inCart.length > 0) 
@@ -336,7 +337,10 @@ items.forEach((item, i) => {
         summaryPrice += parseFloat(price.innerText);
 
         //  Add item quantity to array
-        itemsQuantity.push(1);
+        itemsQuantity.push(1);    
+
+        // Show message box
+        document.querySelector('.message-container').style.display = "flex";
     }
 
     // Add data to local storage
@@ -369,3 +373,8 @@ items.forEach((item, i) => {
   });
 });
 
+
+// Close message box
+document.getElementById('continue-shopping-button').addEventListener('click', () => {
+  document.querySelector('.message-container').style.display = "none";
+});
